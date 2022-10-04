@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  	<head> 
+     <meta charset="utf-8"> 
+		<title>Mata Mosca</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="estilo.css" />
+
+    <script src="jogo.js"></script>    
+    <script>
+      
+      function inciarJogo() {
+        var nivel = document.getElementById('nivel').value
+
+
+      if(nivel === '') {
+
+        alert('Seleciona o baguio ai irmão')
+        return false
+      }
+      
+      window.location.href = "mata_mosca.html?" + nivel
+    }
+
+    </script>
+
+    
+
+
+
+
+
+  </head>
+      
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <img src="imagens/game.png" />
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+          <div class="col">
+            <div class="d-flex justify-content-center">
+              <div class="mb-2">
+                <select class="form-control" id="nivel">
+                  <option value="">--Selecione sua capacidade--</option>
+                  <option value="paia">Noob</option>
+                  <option value="brabo">O cara é bom</option>
+                  <option value="deus">Kratos</option>
+                </select>
+              </div>
+
+              <button type="button" class="btn btn-danger btn-lg" onclick="inciarJogo()">Bora</button>
+            </div>
+          </div>
+      </div>
+
+
+  </body>
+
+</html>
